@@ -2,17 +2,12 @@ import { ICart, IProduct } from "../types/Cart";
 import { IGroupedCart } from "../types/IGroupedCart";
 import isProductType from "../utils/IsProductType";
 
-const triggerStorageEvent = () => {
-    window.dispatchEvent(new Event('storage'));
-};
-
 export const addToCart = (productType: keyof ICart, product: IProduct) => {
     const cart: ICart = JSON.parse(localStorage.getItem('cart') || '{"tenis":[],"camisa":[],"mochila":[],"bone":[]}');
 
     cart[productType].push(product);
 
     localStorage.setItem('cart', JSON.stringify(cart));
-    triggerStorageEvent();
 };
 
 export const decreaseFromCart = (productType: keyof ICart, productId: number) => {
@@ -26,7 +21,6 @@ export const decreaseFromCart = (productType: keyof ICart, productId: number) =>
     } else {
         console.log(`Product with ID ${productId} not found in ${productType} cart`);
     }
-    triggerStorageEvent();
 };
 
 export const removeFromCart = (productType: keyof ICart, productId: number) => {
@@ -35,7 +29,6 @@ export const removeFromCart = (productType: keyof ICart, productId: number) => {
     cart[productType] = cart[productType].filter(product => product.id !== productId);
 
     localStorage.setItem('cart', JSON.stringify(cart));
-    triggerStorageEvent();
 };
 
 export const getProductsFromCart = () => {
@@ -67,7 +60,6 @@ export const restartCart = () => {
     const cart: ICart = JSON.parse('{"tenis":[],"camisa":[],"mochila":[],"bone":[]}');
 
     localStorage.setItem('cart', JSON.stringify(cart));
-    triggerStorageEvent();
 }
 
 export const cartLength = () => {

@@ -1,19 +1,20 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import HomePage from "./pages/Home";
-import ProductPage from "./pages/Product";
-import CartPage from "./pages/Cart";
+import { Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
+import { useContext } from "react";
+import { BadgeContext } from "./context/BadgeContext";
+
 
 function App() {
+  const { badge } = useContext(BadgeContext);
+  
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/product" element={<ProductPage />} />
-          <Route path="/cart" element={<CartPage />} />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <div className="App">
+      <Navbar />
+      <Outlet />
+      <Footer />
+    </div>
   );
 }
 

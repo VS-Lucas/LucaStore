@@ -5,8 +5,8 @@ import { IBone } from "../types/Bone";
 import { ICamisa } from "../types/Camisa";
 import { IMochila } from "../types/Mochila";
 import { ITenis } from "../types/Tenis";
-import Navbar from "../layouts/Navbar";
-import Footer from "../layouts/Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function ProductPage() {
     const [data, setData] = useState<ITenis | ICamisa | IMochila | IBone | undefined>(undefined);

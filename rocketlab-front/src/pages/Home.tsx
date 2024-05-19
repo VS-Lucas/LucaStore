@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -11,9 +11,6 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 
 import { FetchProdutos } from '../services/RestServices';
 
-import Footer from "../layouts/Footer";
-import Navbar from "../layouts/Navbar";
-
 import { ITenis } from '../types/Tenis';
 import { ICamisa } from '../types/Camisa';
 import { IMochila } from '../types/Mochila';
@@ -24,7 +21,12 @@ import { IProduct } from '../types/Cart';
 import isProductType from '../utils/IsProductType';
 import ConfirmToast from '../utils/ConfirmToast';
 
+import { BadgeContext } from '../context/BadgeContext';
+
 export default function HomePage() {
+
+  const {incrementBadge} = useContext(BadgeContext);
+
   const [data, setData] = useState<ITenis[] | ICamisa[] | IMochila[] | IBone[]>([]);
   const [categoria, setCategoria] = useState<'tenis' | 'camisa' | 'mochila' | 'bone'>('tenis');
 
@@ -57,6 +59,7 @@ export default function HomePage() {
   const handleAddToCart = (categoria: string, produto: IProduct) => {
     if (isProductType(categoria)) {
       addToCart(categoria, produto);
+      incrementBadge();
     } else {
       console.error(`Invalid category: ${categoria}`);
       return;
@@ -77,7 +80,6 @@ export default function HomePage() {
 
   return (
     <>
-      <Navbar />
       <div>
         {/* Title */}
         <div className="pt-8 pb-6 bg-gray-100">
@@ -132,7 +134,6 @@ export default function HomePage() {
         </section>
 
       </div>
-      <Footer />
       <ConfirmToast />
     </>
   );

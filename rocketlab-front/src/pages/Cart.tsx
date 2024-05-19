@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import Navbar from "../layouts/Navbar";
+import { useEffect, useState, useContext } from 'react';
 import { getGroupedProducts, getProductsFromCart, removeFromCart, restartCart } from '../services/CartServices';
 import { IGroupedCart } from '../types/IGroupedCart';
 import { FaRegTrashAlt } from "react-icons/fa";
@@ -10,9 +9,13 @@ import { addToCart, decreaseFromCart } from '../services/CartServices';
 import { toast } from 'react-toastify';
 import ConfirmToast from '../utils/ConfirmToast';
 
+import { BadgeContext } from '../context/BadgeContext';
+
 export default function CartPage() {
   const [cartItems, setCartItems] = useState<IGroupedCart>({});
   const navigate = useNavigate();
+
+  const { incrementBadge, decrementBadge, restartBadge } = useContext(BadgeContext);
 
   useEffect(() => {
     const cartData = getProductsFromCart();
@@ -26,6 +29,7 @@ export default function CartPage() {
   const handleRemove = (category: string, productId: number) => {
     if (isProductType(category)) {
       removeFromCart(category, productId);
+      restartBadge();
       setCartItems((prevCartItems) => {
         const updatedCategory = { ...prevCartItems[category] };
         delete updatedCategory[productId];
@@ -46,8 +50,13 @@ export default function CartPage() {
 
   const handleIncreaseQuantity = (category: string, product: IProduct) => {
     if (isProductType(category)) {
+
       addToCart(category, product);
+
+      incrementBadge();
+
       const cartData = getProductsFromCart();
+
       if (cartData) {
         const parsedCart = JSON.parse(cartData);
         const groupedProducts = getGroupedProducts(parsedCart);
@@ -58,8 +67,13 @@ export default function CartPage() {
 
   const handleDecreaseQuantity = (category: string, productId: number) => {
     if (isProductType(category)) {
+
       decreaseFromCart(category, productId);
+
+      decrementBadge();
+
       const cartData = getProductsFromCart();
+
       if (cartData) {
         const parsedCart = JSON.parse(cartData);
         const groupedProducts = getGroupedProducts(parsedCart);
@@ -118,7 +132,6 @@ export default function CartPage() {
 
   return (
     <>
-      <Navbar />
       <div className="bg-gray-100 pt-8">
         {!isCartEmpty() && (
           <h1 className="mb-10 text-center text-2xl font-bold">Itens no carrinho</h1>
