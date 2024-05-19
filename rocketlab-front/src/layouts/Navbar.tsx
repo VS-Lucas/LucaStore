@@ -1,77 +1,57 @@
+import { useEffect, useState } from "react";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { IoHomeOutline } from "react-icons/io5";
-
+import { cartLength } from "../services/CartServices";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const [cartItemCount, setCartItemCount] = useState(0);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const updateCartLength = () => {
+      setCartItemCount(cartLength());
+    };
+
+    updateCartLength();
+
+    window.addEventListener('storage', updateCartLength);
+
+    return () => {
+      window.removeEventListener('storage', updateCartLength);
+    };
+  }, []);
+
+  const handleToCart = () => {
+    navigate("/cart");
+  };
+
+  const handleToHome = () => {
+    navigate("/");
+  };
+
   return (
-    <>
-      <nav className="fixed z-10 w-full bg-white border-gray-200 dark:bg-gray-900">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a
-            href="/"
-            className="flex items-center space-x-3 rtl:space-x-reverse"
-          >
-            <img
-              src="https://flowbite.com/docs/images/logo.svg"
-              className="h-8"
-              alt="Flowbite Logo"
-            />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              LucaShop
-            </span>
-          </a>
-          <div className="md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <button
-              data-collapse-toggle="navbar-cta"
-              type="button"
-              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-              aria-controls="navbar-cta"
-              aria-expanded="false"
-            >
-              <span className="sr-only">Open main menu</span>
-              <svg
-                className="w-5 h-5"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 17 14"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M1 1h15M1 7h15M1 13h15"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            className="items-center justify-between hidden w-full md:flex md:w-auto md:order-2"
-            id="navbar-cta"
-          >
-            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-              <li>
-                <a
-                  href="/"
-                  className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  <IoHomeOutline className="text-2xl" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/cart"
-                  className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  <MdOutlineShoppingCart className="text-2xl" />
-                </a>
-              </li>
-            </ul>
-          </div>
+    <header className="text-gray-600 body-font">
+      <div className="container mx-auto flex justify-between flex-wrap p-5 flex-col md:flex-row items-center">
+        <a href="/" className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg>
+          <span className="ml-3 text-xl">Tailblocks</span>
+        </a>
+        <div>
+          <button onClick={handleToHome} type="button" className="relative mr-4 inline-flex items-center p-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-gray-100 md:hover:bg-blue-200 md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+            <IoHomeOutline className="text-2xl" />
+          </button>
+          <button onClick={handleToCart} type="button" className="relative inline-flex items-center p-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-gray-100 md:hover:bg-blue-200 md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+            <MdOutlineShoppingCart className="text-2xl" />
+            {cartItemCount > 0 && (
+              <div className="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900">{cartItemCount}</div>
+            )}
+          </button>
         </div>
-      </nav>
-    </>
+      </div>
+    </header>
   );
 };
 

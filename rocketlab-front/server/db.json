@@ -4,56 +4,56 @@
             "id": "1",
             "nome": "Tênis 1",
             "descricao": "Descrição do Tênis 1",
-            "preco": "R$ 199,99",
+            "preco": 199.99,
             "imgUrl": "https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
         },
         {
             "id": "2",
             "nome": "Tênis 2",
             "descricao": "Descrição do Tênis 2",
-            "preco": "R$ 299,99",
+            "preco": 299.99,
             "imgUrl": "https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bmlrZSUyMHRlbmlzfGVufDB8fDB8fHww"
         },
         {
             "id": "3",
             "nome": "Tênis 3",
             "descricao": "Descrição do Tênis 3",
-            "preco": "R$ 399,99",
+            "preco": 399.99,
             "imgUrl": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
         },
         {
             "id": "4",
             "nome": "Tênis 4",
             "descricao": "Descrição do Tênis 4",
-            "preco": "R$ 499,99",
+            "preco": 499.99,
             "imgUrl": "https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
         },
         {
             "id": "5",
             "nome": "Tênis 5",
             "descricao": "Descrição do Tênis 5",
-            "preco": "R$ 599,99",
+            "preco": 599.99,
             "imgUrl": "https://images.unsplash.com/photo-1520256862855-398228c41684?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
         },
         {
             "id": "6",
             "nome": "Tênis 6",
             "descricao": "Descrição do Tênis 6",
-            "preco": "R$ 699,99",
+            "preco": 699.99,
             "imgUrl": "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1112&q=80"
         },
         {
             "id": "7",
             "nome": "Tênis 7",
             "descricao": "Descrição do Tênis 7",
-            "preco": "R$ 799,99",
+            "preco": 799.99,
             "imgUrl": "https://images.unsplash.com/photo-1539185441755-769473a23570?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
         },
         {
             "id": "8",
             "nome": "Tênis 8",
             "descricao": "Descrição do Tênis 8",
-            "preco": "R$ 899,99",
+            "preco": 899.99,
             "imgUrl": "https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1112&q=80"
         }
     ],
@@ -62,56 +62,56 @@
             "id": "1",
             "nome": "Camiseta 1",
             "descricao": "Descrição da Camiseta 1",
-            "preco": "R$ 79,99",
+            "preco": 79.99,
             "imgUrl": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2FtaXNldGF8ZW58MHx8MHx8fDA%3D"
         },
         {
             "id": "2",
             "nome": "Camiseta 2",
             "descricao": "Descrição da Camiseta 2",
-            "preco": "R$ 89,99",
+            "preco": 89.99,
             "imgUrl": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNhbWlzZXRhfGVufDB8fDB8fHww"
         },
         {
             "id": "3",
             "nome": "Camiseta 3",
             "descricao": "Descrição da Camiseta 3",
-            "preco": "R$ 99,99",
+            "preco": 99.99,
             "imgUrl": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGNhbWlzZXRhfGVufDB8fDB8fHww"
         },
         {
             "id": "4",
             "nome": "Camiseta 4",
             "descricao": "Descrição da Camiseta 4",
-            "preco": "R$ 109,99",
+            "preco": 109.99,
             "imgUrl": "https://media.istockphoto.com/id/1584612585/pt/foto/mens-polo-shirt.jpg?s=612x612&w=0&k=20&c=c9tmkENe-KuR99lhsF99H4IQKF_YXTIzVq-ISelccdc="
         },
         {
             "id": "5",
             "nome": "Camiseta 5",
             "descricao": "Descrição da Camiseta 5",
-            "preco": "R$ 119,99",
+            "preco": 119.99,
             "imgUrl": "https://media.istockphoto.com/id/483960103/pt/foto/t-shirt-preta-em-branco-%C3%A0-frente-com-tra%C3%A7ado-de-recorte.jpg?s=612x612&w=0&k=20&c=2-eQtlzB6Cn_GarkQBJbwQjevDHSnKO3D6HzQiaP5F4="
         },
         {
             "id": "6",
             "nome": "Camiseta 6",
             "descricao": "Descrição da Camiseta 6",
-            "preco": "R$ 129,99",
+            "preco": 129.99,
             "imgUrl": "https://media.istockphoto.com/id/1263639087/pt/foto/blue-jeans-shirt-with-button.jpg?s=612x612&w=0&k=20&c=wpIiezeYCgjP8EydjfrzpCBC3XpPdZzYK8BfCJeYJIU="
         },
         {
             "id": "7",
             "nome": "Camiseta 7",
             "descricao": "Descrição da Camiseta 7",
-            "preco": "R$ 139,99",
+            "preco": 139.99,
             "imgUrl": "https://media.istockphoto.com/id/1209887384/pt/foto/green-t-shirt-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=qigF-FwceVdtVLtjUJpVf7ZTE9o9G6DbRbCAGV7zW38="
         },
         {
             "id": "8",
             "nome": "Camiseta 8",
             "descricao": "Descrição da Camiseta 8",
-            "preco": "R$ 149,99",
+            "preco": 149.99,
             "imgUrl": "https://images.unsplash.com/photo-1618354691438-25bc04584c23?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fGNhbWlzZXRhfGVufDB8fDB8fHww"
         }
     ],
@@ -120,56 +120,56 @@
             "id": "1",
             "nome": "Mochila 1",
             "descricao": "Descrição da Mochila 1",
-            "preco": "R$ 199,99",
+            "preco": 199.99,
             "imgUrl": "https://plus.unsplash.com/premium_photo-1664110691115-790e20a41744?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGJhY2twYWNrfGVufDB8fDB8fHww"
         },
         {
             "id": "2",
             "nome": "Mochila 2",
             "descricao": "Descrição da Mochila 2",
-            "preco": "R$ 219,99",
+            "preco": 219.99,
             "imgUrl": "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFja3BhY2t8ZW58MHx8MHx8fDA%3D"
         },
         {
             "id": "3",
             "nome": "Mochila 3",
             "descricao": "Descrição da Mochila 3",
-            "preco": "R$ 239,99",
+            "preco": 239.99,
             "imgUrl": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFja3BhY2t8ZW58MHx8MHx8fDA%3D"
         },
         {
             "id": "4",
             "nome": "Mochila 4",
             "descricao": "Descrição da Mochila 4",
-            "preco": "R$ 259,99",
+            "preco": 259.99,
             "imgUrl": "https://images.unsplash.com/photo-1621624959365-071359461b94?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGJhY2twYWNrfGVufDB8fDB8fHww"
         },
         {
             "id": "5",
             "nome": "Mochila 5",
             "descricao": "Descrição da Mochila 5",
-            "preco": "R$ 279,99",
+            "preco": 279.99,
             "imgUrl": "https://images.unsplash.com/photo-1622260614927-208cfe3f5cfd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGJhY2twYWNrfGVufDB8fDB8fHww"
         },
         {
             "id": "6",
             "nome": "Mochila 6",
             "descricao": "Descrição da Mochila 6",
-            "preco": "R$ 299,99",
+            "preco": 299.99,
             "imgUrl": "https://images.unsplash.com/photo-1546938576-6e6a64f317cc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGJhY2twYWNrfGVufDB8fDB8fHww"
         },
         {
             "id": "7",
             "nome": "Mochila 7",
             "descricao": "Descrição da Mochila 7",
-            "preco": "R$ 319,99",
+            "preco": 319.99,
             "imgUrl": "https://images.unsplash.com/photo-1557669246-38f5ebeb001c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fGJhY2twYWNrfGVufDB8fDB8fHww"
         },
         {
             "id": "8",
             "nome": "Mochila 8",
             "descricao": "Descrição da Mochila 8",
-            "preco": "R$ 339,99",
+            "preco": 339.99,
             "imgUrl": "https://images.unsplash.com/photo-1547949003-9792a18a2601?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTZ8fGJhY2twYWNrfGVufDB8fDB8fHww"
         }
     ],
@@ -178,56 +178,56 @@
             "id": "1",
             "nome": "Boné 1",
             "descricao": "Descrição do Boné 1",
-            "preco": "R$ 59,99",
+            "preco": 59.99,
             "imgUrl": "https://media.istockphoto.com/id/497040301/pt/foto/chap%C3%A9u-de-beisebol-branco.jpg?s=612x612&w=0&k=20&c=bW9Qal6at08GFMSDkq0pQVCTJm2ZCE1wJqVntNjnB-g="
         },
         {
             "id": "2",
             "nome": "Boné 2",
             "descricao": "Descrição do Boné 2",
-            "preco": "R$ 69,99",
+            "preco": 69.99,
             "imgUrl": "https://media.istockphoto.com/id/497600473/pt/foto/preto-chap%C3%A9u-de-beisebol.jpg?s=612x612&w=0&k=20&c=kwnLzjoRfFeVlVjaryMqK00KH9kFxRyf9BxjkXYgpnM="
         },
         {
             "id": "3",
             "nome": "Boné 3",
             "descricao": "Descrição do Boné 3",
-            "preco": "R$ 79,99",
+            "preco": 79.99,
             "imgUrl": "https://media.istockphoto.com/id/1451763647/pt/foto/blue-baseball-cap.jpg?s=612x612&w=0&k=20&c=Dbr90EqtwQq1X3H9jmYHS2UTOnDfl6ZQ7zpJ4-mQdqM="
         },
         {
             "id": "4",
             "nome": "Boné 4",
             "descricao": "Descrição do Boné 4",
-            "preco": "R$ 89,99",
+            "preco": 89.99,
             "imgUrl": "https://media.istockphoto.com/id/118358120/pt/foto/vermelho-bon%C3%A9-de-basebol.jpg?s=612x612&w=0&k=20&c=lW0Zo56mYVKTYXpPUHMx_8QqKXTdIVQ_dZWyYwow-x4="
         },
         {
             "id": "5",
             "nome": "Boné 5",
             "descricao": "Descrição do Boné 5",
-            "preco": "R$ 99,99",
+            "preco": 99.99,
             "imgUrl": "https://media.istockphoto.com/id/498113633/pt/foto/cap-laranja.jpg?s=612x612&w=0&k=20&c=qTcNbuFfPvUaJljfdJoSkVOc_dgpXUKFd72jekpBZrs="
         },
         {
             "id": "6",
             "nome": "Boné 6",
             "descricao": "Descrição do Boné 6",
-            "preco": "R$ 109,99",
+            "preco": 109.99,
             "imgUrl": "https://media.istockphoto.com/id/964313670/pt/foto/cap-on-white-background.jpg?s=612x612&w=0&k=20&c=jCv3ewbPJfBkJeNBm-nTwGUjL4VnSDo_VvgqSj3f7Cw="
         },
         {
             "id": "7",
             "nome": "Boné 7",
             "descricao": "Descrição do Boné 7",
-            "preco": "R$ 119,99",
+            "preco": 119.99,
             "imgUrl": "https://media.istockphoto.com/id/171115334/pt/foto/tampa-verde.jpg?s=612x612&w=0&k=20&c=_s1f6kwpmV-fa_Xyt3mMOzBv4K2sdvQmE8W1IsfpMCc="
         },
         {
             "id": "8",
             "nome": "Boné 8",
             "descricao": "Descrição do Boné 8",
-            "preco": "R$ 119,99",
+            "preco": 119.99,
             "imgUrl": "https://media.istockphoto.com/id/118348709/pt/foto/preto-bon%C3%A9-de-basebol.jpg?s=612x612&w=0&k=20&c=BPPJJd5-rj1WNA6I7e0ogr1khkzokvbPohmXXbSNqCc="
         }
     ]

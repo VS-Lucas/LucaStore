@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { GiConverseShoe } from "react-icons/gi";
@@ -19,8 +19,10 @@ import { ICamisa } from '../types/Camisa';
 import { IMochila } from '../types/Mochila';
 import { IBone } from '../types/Bone';
 
-import { addToCart, getProductsFromCart } from '../services/CartServices';
-import { ICart, IProduct } from '../types/Cart';
+import { addToCart } from '../services/CartServices';
+import { IProduct } from '../types/Cart';
+import isProductType from '../utils/IsProductType';
+import ConfirmToast from '../utils/ConfirmToast';
 
 export default function HomePage() {
   const [data, setData] = useState<ITenis[] | ICamisa[] | IMochila[] | IBone[]>([]);
@@ -31,7 +33,6 @@ export default function HomePage() {
       const produtos = await FetchProdutos(categoria);
       if (produtos && produtos.tenis) {
         setData(produtos.tenis);
-        console.log('oiii ', getProductsFromCart());
       }
     };
 
@@ -51,10 +52,6 @@ export default function HomePage() {
     };
 
     getData();
-  };
-
-  const isProductType = (key: string): key is keyof ICart => {
-    return ['tenis', 'camisa', 'mochila', 'bone'].includes(key);
   };
 
   const handleAddToCart = (categoria: string, produto: IProduct) => {
@@ -83,12 +80,12 @@ export default function HomePage() {
       <Navbar />
       <div>
         {/* Title */}
-        <div className="pt-24 pb-6 bg-gray-100">
+        <div className="pt-8 pb-6 bg-gray-100">
           <h1 className="text-center text-2xl font-bold text-gray-800">Produtos</h1>
         </div>
 
         {/* Product List */}
-        <section className="pb-10 bg-gray-100">
+        <section className="pb-10 bg-gray-100 ">
 
           {/* Tab Menu */}
           <div className="flex flex-wrap items-center overflow-x-auto overflow-y-hidden justify-center text-gray-800">
@@ -115,7 +112,7 @@ export default function HomePage() {
             {data.map(produto => (
               <article key={produto.id} className="rounded-3xl bg-white p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300 ">
                 <div className="relative overflow-hidden rounded-xl">
-                  <img className="h-48 w-full object-cover" src={produto.imgUrl} alt={produto.descricao} />
+                  <a href={`/product/${categoria}/${produto.id}`}><img className="h-48 w-full object-cover" src={produto.imgUrl} alt={produto.descricao} /></a>
                 </div>
 
                 <div className="mt-1 p-2">
@@ -137,18 +134,7 @@ export default function HomePage() {
 
       </div>
       <Footer />
-      <ToastContainer
-        position="bottom-right"
-        autoClose={2000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
+      <ConfirmToast />
     </>
   );
 }
