@@ -36,3 +36,10 @@ export const FetchProdutos = async (categoria: string) => {
     };
   }
 };
+
+export const FetchProduto = async <T>(categoria: string, id: number) => {
+  const produto = await axios.get<T>(`${BASE_URL}/${categoria}/${id}`);
+  return {
+    produto: produto.data
+  };
+}

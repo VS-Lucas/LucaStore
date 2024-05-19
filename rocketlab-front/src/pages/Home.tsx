@@ -112,7 +112,7 @@ export default function HomePage() {
             {data.map(produto => (
               <article key={produto.id} className="rounded-3xl bg-white p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300 ">
                 <div className="relative overflow-hidden rounded-xl">
-                  <a href={`/product/${categoria}/${produto.id}`}><img className="h-48 w-full object-cover" src={produto.imgUrl} alt={produto.descricao} /></a>
+                  <a href={`/product?categoria=${encodeURIComponent(categoria)}&id=${encodeURIComponent(produto.id)}`}><img className="h-48 w-full object-cover" src={produto.imgUrl} alt={produto.descricao} /></a>
                 </div>
 
                 <div className="mt-1 p-2">
