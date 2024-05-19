@@ -121,7 +121,7 @@ export default function HomePage() {
                   <h2 className="text-slate-700">{produto.nome}</h2>
 
                   <div className="mt-3 flex items-end justify-between">
-                    <p className="text-lg font-bold text-blue-500">{produto.preco}</p>
+                    <p className="text-lg font-bold text-blue-500">R${produto.preco}</p>
 
                     <button className="flex items-center text-sm space-x-1.5 rounded-lg bg-blue-500 px-4 py-1.5 text-white duration-100 hover:bg-blue-600" onClick={() => handleAddToCart(categoria, produto)}>
                       <MdOutlineShoppingCart />

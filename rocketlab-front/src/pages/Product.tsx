@@ -33,7 +33,6 @@ export default function ProductPage() {
 
     return (
         <>
-            <Navbar />
             <section className="text-gray-600 body-font overflow-hidden bg-gray-100">
                 <div className="container px-5 py-24 mx-auto">
                     <div className="lg:w-4/5 mx-auto flex flex-wrap">
@@ -114,7 +113,6 @@ export default function ProductPage() {
                     </div>
                 </div>
             </section>
-            <Footer />
         </>
     )
 }
