@@ -23,10 +23,10 @@ import ConfirmToast from '../utils/ConfirmToast';
 
 import { BadgeContext } from '../context/BadgeContext';
 
+import produtos from '../assets/icons/produtos.svg';
+
 export default function HomePage() {
-
-  const {incrementBadge} = useContext(BadgeContext);
-
+  const { incrementBadge } = useContext(BadgeContext);
   const [data, setData] = useState<ITenis[] | ICamisa[] | IMochila[] | IBone[]>([]);
   const [categoria, setCategoria] = useState<'tenis' | 'camisa' | 'mochila' | 'bone'>('tenis');
 
@@ -77,13 +77,12 @@ export default function HomePage() {
     });
   };
 
-
   return (
     <>
       <div>
         {/* Title */}
-        <div className="pt-8 pb-6 bg-gray-100">
-          <h1 className="text-center text-2xl font-bold text-gray-800">Produtos</h1>
+        <div className="flex justify-center pt-8 pb-6 bg-gray-100">
+          <img src={produtos} className="w-24 h-12" alt="Produtos" />
         </div>
 
         {/* Product List */}
@@ -91,19 +90,35 @@ export default function HomePage() {
 
           {/* Tab Menu */}
           <div className="flex flex-wrap items-center overflow-x-auto overflow-y-hidden justify-center text-gray-800">
-            <button onClick={() => handleCategoriaChange('tenis')} className="flex items-center flex-shrink-0 px-5 py-3 space-x-2text-gray-600">
+            <button
+              onClick={() => handleCategoriaChange('tenis')}
+              className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 rounded-l-xl hover:bg-gray-200 ${categoria === 'tenis' ? 'bg-gray-300' : 'bg-gray-100'
+                }`}
+            >
               <GiConverseShoe />
               <span className='pl-2'>Tênis</span>
             </button>
-            <button onClick={() => handleCategoriaChange('camisa')} className="flex items-center flex-shrink-0 px-5 py-3 space-x-2 rounded-t-lg text-gray-900">
+            <button
+              onClick={() => handleCategoriaChange('camisa')}
+              className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 hover:bg-gray-200 ${categoria === 'camisa' ? 'bg-gray-300' : 'bg-gray-100'
+                }`}
+            >
               <PiTShirt />
               <span className='pl-2'>Camisas</span>
             </button>
-            <button onClick={() => handleCategoriaChange('mochila')} className="flex items-center flex-shrink-0 px-5 py-3 space-x-2">
+            <button
+              onClick={() => handleCategoriaChange('mochila')}
+              className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 hover:bg-gray-200 ${categoria === 'mochila' ? 'bg-gray-300' : 'bg-gray-100'
+                }`}
+            >
               <PiBackpackLight />
               <span className='pl-2'>Mochilas</span>
             </button>
-            <button onClick={() => handleCategoriaChange('bone')} className="flex items-center flex-shrink-0 px-5 py-3 space-x-2">
+            <button
+              onClick={() => handleCategoriaChange('bone')}
+              className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 rounded-r-xl hover:bg-gray-200 ${categoria === 'bone' ? 'bg-gray-300' : 'bg-gray-100'
+                }`}
+            >
               <PiBaseballCap />
               <span className='pl-2'>Bonés</span>
             </button>
