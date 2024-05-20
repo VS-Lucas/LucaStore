@@ -31,6 +31,7 @@ npm i pnpm
 ```
 
 ### 2: Rodar a aplicação
+**Abra uma nova guia do terminal e no diretório /rocketlab-front, rode:**
 
 ```
   pnpm dev
