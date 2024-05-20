@@ -6,13 +6,15 @@ type BadgeContextType = {
     incrementBadge: () => void;
     decrementBadge: () => void;
     restartBadge: () => void;
+    cleanBadge: () => void;
 };
 
 const defaultValue: BadgeContextType = {
     badgeCount: cartLength(),
     incrementBadge: () => {},
     decrementBadge: () => {},
-    restartBadge: () => {}
+    restartBadge: () => {},
+    cleanBadge: () => {}
 };
 
 type BadgeProviderProps = {
@@ -36,8 +38,12 @@ export const BadgeProvider = ({ children }: BadgeProviderProps) => {
         setBadgeCount(cartLength);
     }
 
+    const cleanBadge = () => {
+        setBadgeCount(0);
+    }
+
     return (
-        <BadgeContext.Provider value={{ badgeCount, incrementBadge, decrementBadge, restartBadge }}>
+        <BadgeContext.Provider value={{ badgeCount, incrementBadge, decrementBadge, restartBadge, cleanBadge }}>
             {children}
         </BadgeContext.Provider>
     );

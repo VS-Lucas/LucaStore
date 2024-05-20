@@ -1,5 +1,5 @@
 import { useEffect, useState, useContext } from 'react';
-import { getGroupedProducts, getProductsFromCart, removeFromCart, restartCart } from '../services/CartServices';
+import { getGroupedProducts, getProductsFromCart, removeFromCart } from '../services/CartServices';
 import { IGroupedCart } from '../types/IGroupedCart';
 import { FaRegTrashAlt } from "react-icons/fa";
 import isProductType from '../utils/IsProductType';
@@ -15,7 +15,7 @@ export default function CartPage() {
   const [cartItems, setCartItems] = useState<IGroupedCart>({});
   const navigate = useNavigate();
 
-  const { incrementBadge, decrementBadge, restartBadge } = useContext(BadgeContext);
+  const { incrementBadge, decrementBadge, restartBadge, cleanBadge } = useContext(BadgeContext);
 
   useEffect(() => {
     const cartData = getProductsFromCart();
@@ -125,7 +125,7 @@ export default function CartPage() {
     });
 
     setTimeout(() => {
-      restartCart();
+      cleanBadge();
       navigate("/");
     }, 2500);
   }
