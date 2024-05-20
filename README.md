@@ -8,7 +8,7 @@
 ## Passos para rodar o projeto
 
 ### 1: Instalar o gerenciador de pacotes pnpm
-**Usando npm, entre no diretório rocketlab-front e rode:**
+**Usando npm, entre no diretório rocketlab-front (cd LucaStore -> cd rocketlab-front) e rode:**
 
 ```
 npm i pnpm
