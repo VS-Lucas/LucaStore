@@ -33,7 +33,7 @@ export const BadgeProvider = ({ children }: BadgeProviderProps) => {
     }
 
     const restartBadge = () => {
-        setBadgeCount(0);
+        setBadgeCount(cartLength);
     }
 
     return (
